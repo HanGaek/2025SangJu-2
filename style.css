@@ -1,0 +1,153 @@
+@charset "UTF-8";
+body {
+  background-color: #e0f0ff;
+  color: #ffffff;
+  font-family: "맑은 고딕", Malgun Gothic, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+#quiz-screen {
+  position: relative;
+  padding: 40px 0;
+  min-height: 100vh;
+}
+
+#question-box {
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 600px;
+  margin: 100px auto 40px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  font-size: 48pt;
+  margin-top: 80px;
+}
+
+.subtitle {
+  font-size: 24pt;
+  margin-bottom: 50px;
+}
+
+#start-btn {
+  font-size: 32pt;
+  background-color: #007acc;
+  color: white;
+  padding: 16px 40px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#start-btn:hover {
+  background-color: #005fa3;
+}
+
+#timer {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 18pt;
+  color: #000;
+  font-weight: bold;
+}
+
+#choices-box {
+  margin-top: 30px;
+}
+
+#choices-box button {
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  margin: 10px auto;
+  padding: 14px;
+  font-size: 16pt;
+  background-color: #007acc;
+  color: white;
+  border: 2px solid white;
+  border-radius: 0;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+#choices-box button:hover {
+  background-color: #005fa3;
+}
+
+#choices-box button.selected {
+  border: 2px solid yellow;
+}
+
+#choices-box button.correct-answer {
+  color: red !important;
+}
+
+.explanation {
+  font-size: 16pt;
+  color: #ff6666;
+  font-style: italic;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+#check-btn,
+#next-btn,
+#quit-btn {
+  font-size: 18pt;
+  padding: 12px 30px;
+  margin: 20px 10px;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+#check-btn {
+  background-color: #28a745;
+}
+
+#next-btn {
+  background-color: #6c63ff;
+}
+
+#quit-btn {
+  background-color: #dc3545;
+}
+
+.hidden {
+  display: none;
+}
+
+#quiz-screen h1,
+#quiz-screen p {
+  color: black;
+  font-weight: bold;
+}
+
+/* 정답 박스 스타일 */
+.answer-box {
+  background-color: #fff;
+  color: #000;
+  margin-top: 30px;
+  padding: 20px;
+  border-radius: 12px;
+  border: 2px solid #ccc;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
